@@ -1,0 +1,320 @@
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+    </style>
+    <script type="text/javascript" src="journalScript.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+
+    <title>Jesse's Personal Website</title>
+</head>
+
+<body>
+
+    <!--Top Heading-->
+    <div class="topHeading">
+        <p>Jesse Flores<a href="assets/Jesse_Flores_MechE_CS.pdf" target="_blank" id="links-resume">Resume</a></p>
+        <header class="header">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="journal.html">Home</a></li>
+                    <li><a href="about_me.html">About Me</a></li>
+                    <!-- <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact_me.html">Contact</a></li> -->
+
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+    <!-- Landing Animation Section -->
+    <!-- <section class="landing-animation" id="landingAnimation">
+    <div class="door-container">
+        <div class="left-door"></div>
+        <div class="right-door"></div>
+    </div>
+    <div class="intro-text">
+        <h1>Welcome to Jesse's Portfolio</h1>
+        <p>An engineering journey</p>
+    </div>
+</section> -->
+
+
+
+
+
+
+
+
+
+    <section class="introduction" id="introduction">
+        <div class="sidebar">
+            <div class="quickIntro">
+                <img id="headshot" src="assets/me.jpg" alt="Jesse Flores" />
+                <p class="name">Jesse Flores</p>
+                <!-- <p class="major">Tufts University Undergraduate</p> -->
+                <p class="studying">MechE + CS @ Tufts</p>
+            </div>
+            <div class="linkList">
+                <a href="#projects" id="links">Projects</a>
+                <a href="#research" id="links">Research</a>
+                <a href="#certificates" id="links">Certificates</a>
+                <a href="assets/Jesse_Flores_MechE_CS.pdf" target="_blank" id="links-resume">Resume</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div id="projects" class="random_space2"></div>
+
+    <!--HERE STARTS NEW CODE-->
+
+
+
+
+
+
+
+    <section class="projects">
+        <div class="random_space2"></div>
+        <div class="section-title" style="margin-bottom:10px;">
+            <h2>Projects</h2>
+            <p>Explore my programming and CAD projects!</p>
+        </div>
+
+        <div class="projects-container">
+            <div class="projects-category">
+                <h3>Programming Projects</h3>
+                <div class="project-item">
+                    <a href="path/to/project1">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>Real-Time Online Chat</h4>
+                    </a>
+                    <p>A real-time chat platform using vanilla JavaScript and WebSocket in Node.js, allowing instant
+                        communication, customizable usernames, and message history saved in a JSON file.</p>
+                </div>
+                <div class="project-item">
+                    <a href="path/to/project2">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>AI-Powered Lego Structure Recognition</h4>
+                    </a>
+                    <p>A comprehensive educational application utilizing Python, the ChatGPT API, computer vision, and
+                        responsive web design, allowing elementary students to build Lego structures and engage with
+                        AI-driven recognition and feedback while learning about AI and ML.</p>
+                </div>
+                <div class="project-item">
+                    <a href="path/to/project2">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>Visualizing Quantum States and Teleportation with the Bloch Sphere</h4>
+                    </a>
+                    <p>A simulation using the Bloch sphere to visualize quantum states, superpositions, quantum gates,
+                        and teleportation, helping to explore concepts like quantum entanglement and the impact of
+                        operations like Hadamard and CNOT on qubit states.</p>
+                </div>
+                <div class="project-item">
+                    <a href="path/to/project2">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>Real-Time Motion Detection and Object Tracking with OpenCV</h4>
+                    </a>
+                    <p>A real-time object tracking system using OpenCV that captures video, detects motion, applies
+                        background subtraction, and tracks moving objects with bounding boxes, displaying cropped object
+                        sections in a live feed.</p>
+                </div>
+
+            </div>
+            <!-- CAD Projects -->
+            <div class="projects-category">
+                <h3>CAD Projects</h3>
+                <div class="project-item">
+                    <a href="path/to/cadproject1">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>Turbofan Jet Engine</h4>
+                    </a>
+                    <p>CAD design for fully-working jet engine design exploring the physical aspect of jet engines.</p>
+                </div>
+                <div class="project-item">
+                    <a href="path/to/cadproject2">
+                        <img src="assets/thumbnail.jpg" alt="Thumbnail">
+                        <hr>
+                        <h4>Turbocharger</h4>
+                    </a>
+                    <p>CAD design for fully working turbocharger exlpored within jet engine investigation.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <div class="random_space2"></div>
+
+    <section class="projects_and_achievements" id="research">
+        <div class="section-title">
+            <h2>Research & Achievements</h2>
+            <p>Explore my work and certifications!</p>
+        </div>
+
+        <div class="projects-container">
+            <!-- Programming Projects -->
+            <div class="projects-category" id="certs">
+
+                <h2>Research Papers</h2>
+
+                <div class="research_paper">
+                    <h2>Adoption of Green Technology Through Formula 1</h2>
+                    <p id="date">12/24</p>
+                    <p id="paragraph">Evaluation of Formula 1's current impact on and its influential power for adoption
+                        of green technology across the world</p>
+                    <a target="_blank"
+                        href="https://drive.google.com/file/d/1H-vmfFhIKEp_PxVCM9lSRVcQRLax9L2-/view?usp=sharing"><button>Read
+                            More</button></a>
+                </div>
+                <div class="research_paper">
+                    <h2>Exploration of Human Hand Exoskeleton Designs</h2>
+                    <p id="date">05/24</p>
+                    <p id="paragraph">Conducted research on hand exoskeletons, exploring their potential to enhance
+                        human dexterity in rehabilitation, assistive technology, and various industries suc has
+                        augemented reality while addressing design and technological challenges involved.</p>
+                    <a target="_blank"
+                        href="https://drive.google.com/file/d/1CoXionA8RnklVJgTNrKJHDFmCsE_O2f2/view?usp=sharing"><button>Read
+                            More</button></a>
+                </div>
+                <div class="random_space2" id="certificates"></div>
+                <h2>Certifications</h2>
+                <div class="random_space"></div>
+
+                <div class="certification-item">
+                    <a href="assets/MATLAB_Onramp_Certificate_of_Completion.pdf.jpg">
+                        <img src="assets/MATLAB_Onramp_Certificate_of_Completion.pdf.jpg"
+                            alt="MATLAB: On Ramp Certificate">
+                        <hr>
+                        <h4>MATLAB: On Ramp Certificate</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/MATLAB_Curve_Fitting_Certificate_of_Completion.pdf.jpg">
+                        <img src="assets/MATLAB_Curve_Fitting_Certificate_of_Completion.pdf.jpg"
+                            alt="MATLAB: Curve Fitting">
+                        <hr>
+                        <h4>MATLAB: Curve Fitting</h4>
+                    </a>
+                </div>
+                <!-- <div class="certification-item">
+                <a href="assets/">
+                    <img src="assets/" alt="FreeCodeCamp: Web Development">
+                    <hr><h4>FreeCodeCamp: Web Development</h4>
+                </a>
+            </div> -->
+                <div class="certification-item">
+                    <a href="assets/PM1.jpg">
+                        <img src="assets/PM1.jpg" alt="Udemy: Product Management (13 hours)">
+                        <hr>
+                        <h4>Udemy: Product Management (13 hours)</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/PM2.jpg">
+                        <img src="assets/PM2.jpg" alt="Udemy: Product Management (2 hours)">
+                        <hr>
+                        <h4>Udemy: Product Management (2 hours)</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/fundamentalsOfDigitalMarketing - GoogleDigitalGarage - Certificate.pdf.jpg">
+                        <img src="assets/fundamentalsOfDigitalMarketing - GoogleDigitalGarage - Certificate.pdf.jpg"
+                            alt="Google: Online Marketing">
+                        <hr>
+                        <h4>Google: Online Marketing</h4>
+                    </a>
+                </div>
+
+
+                <div class="random_space2"></div>
+                <h2>Academic Awards</h2>
+                <div class="random_space"></div>
+                <div class="certification-item">
+                    <a href="assets/National_Hispanic_rec.png">
+                        <img src="assets/National_Hispanic_rec.png" alt="National Hispanic Recognition Award">
+                        <hr>
+                        <h4>College Board: National Hispanic Recognition Award</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/WE_Service.jpg">
+                        <img src="assets/WE_Service.jpg" alt="WE Service Award">
+                        <hr>
+                        <h4>College Board: WE Service Award</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/">
+                        <img src="assets/AP_Scholar2.png" alt="AP Scholar (high school senior year)">
+                        <hr>
+                        <h4>CollegeBoard: AP Scholar (high school senior)</h4>
+                    </a>
+                </div>
+                <div class="certification-item">
+                    <a href="assets/AP_Scholar1.png">
+                        <img src="assets/AP_Scholar1.png" alt="AP Scholar (high school junior year)">
+                        <hr>
+                        <h4>CollegeBoard: AP Scholar (high school junior)</h4>
+                    </a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <br /><br /><br />
+
+
+    <div class="materials">
+        <div class="resume-end">
+            <a href="assets/Jesse_Flores_MechE_CS.pdf" target="_blank" id="links-resume-end">Resume</a>
+        </div>
+
+        <div class="resume-end">
+            <a href="assets/Jesse_Flores_MechE_CS_CV.pdf" target="_blank" id="links-resume-end">CV</a>
+        </div>
+    </div>
+
+    <br /><br /><br />
+
+
+
+    <footer>
+        <p>
+            Thanks for reading!
+
+            <br />
+            Website designed and developed entirely from scratch by Jesse Flores
+            <br />
+            All Rights Reserved | Copyright ⓒ 2023 Jesse Flores
+        </p><br />
+        <div class="icons"><a href="https://www.linkedin.com/in/flores-jesse/" target="_blank"><img
+                    src="assets/LinkedIn_logo.png" id="icon" alt="LinkedIn Icon"></a>
+        </div>
+        <br />
+
+    </footer>
+</body>
+
+</html>
