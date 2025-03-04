@@ -12,7 +12,11 @@ body {
 }
 
 
-
+/* .iframe_frame{
+    width: 50%;
+    margin:auto;
+    height: fit-content;
+} */
 .projects p{
     font-size: 1.5em;
 }
@@ -25,11 +29,22 @@ body {
     width: 70%;
     margin: auto;
 }
-.projects img, .projects table{
+.projects img:not(#jumbo), .projects table{
     width: 100%;
+}
+#jumbo{
+    width: 50%;
+    margin: 0 auto;
 }
 
 iframe{
+    width:80%;
+    margin: 0 auto;
+    right: 0;
+    padding-left: 10%;
+    border: none;
+}
+table img{
     width:100%;
 }
 
@@ -95,6 +110,7 @@ iframe{
 .navbar ul {
     display: flex;
     list-style: none;
+    padding:0;
     margin: 0;
     justify-content: center;
 }
