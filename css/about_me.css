@@ -7,6 +7,31 @@ body {
     overflow-x: hidden;
     padding: 0;
 }
+.coverpic{
+    width:100%;
+}
+
+
+
+.projects p{
+    font-size: 1.5em;
+}
+.tableOfPics{
+    border-radius: 10px;
+    width:50%;
+}
+.projects{
+    max-width: 1000px;
+    width: 70%;
+    margin: auto;
+}
+.projects img, .projects table{
+    width: 100%;
+}
+
+iframe{
+    width:100%;
+}
 
 #links-resume-end {
     background-color: #1a73e8;
