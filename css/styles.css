@@ -16,6 +16,7 @@ body{
     background-color: #ffffffa0;
     background-image:url(https://d2nmr6p48f8xwg.cloudfront.net/content_pictures/pictures/000/000/567/cea6409f041d9c7133b8544a1960f6f0e6f0c413DSC03809-2.jpg);
     background-repeat: no-repeat;
+    /* background-image:url(/assets/background.jpg); */
     background-size: cover;
 }
 /* Sidebar Navigation */
@@ -105,7 +106,7 @@ padding: 10px 20px;
 } */
 .resume-end {
     text-align: center;
-    margin:20px;
+    margin:auto;
 }
 .materials{
     margin:auto;
