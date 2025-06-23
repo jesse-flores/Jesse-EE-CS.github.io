@@ -65,9 +65,9 @@ body{
 }
 
 .linkList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+    align-items: left;
 }
 
 #links{
@@ -158,9 +158,10 @@ padding: 10px 20px;
     transition: background-color 0.3s ease;
     text-align: center;
 }
-.learnMoreButton button:hover {
+/* .learnMoreButton button:hover {
     background-color: #0c5db4;
-}
+    color: rgb(192, 192, 192);
+} */
  .topHeading p{
     margin-bottom: 10px;
     margin-top: 10px;
@@ -186,7 +187,7 @@ padding: 10px 20px;
     padding:4px;
     font-weight: 500;
 }
-.navbar ul li a:hover {
+.navbar ul li a:hover{
     background-color: rgb(224, 224, 224);
 }
 
@@ -267,6 +268,7 @@ footer{
     padding: 20px;
     text-align:center;
     font-size:0.9em;
+    display: none;
 
 }
 footer p{
@@ -342,17 +344,31 @@ p #date{
     font-weight:600;
     color: #000000;
 }
-.projects-container {
+.projects-container{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
-.projects-category:not(#certs) {
-    width: 400px;
+.projects-category #research{
+    width: 100%;
     padding: 0 20px 0 20px;
-    margin:auto;
     margin-top:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+
 }
+.projects-category:not(#certs){
+    width: 100%;
+    padding: 0 20px 0 20px;
+    margin-top:0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 .projects-category h3, .projects h3{
     font-size: 1.6em;
     font-weight:800;
@@ -366,26 +382,55 @@ p #date{
     margin-bottom: 10px;
     margin-top: 10px;
     overflow: hidden;
+    width: 400px;
+    margin: 0 20px 0 20px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .button-more-info{
     color: black;
     font-size:x-large;
     font: weight 500px rgba(92, 149, 255, 0.322);
 }
+.typical_thing{
+    background-color: #00000048;
+    width:100%;
+    /* display:flex;
+    flex:wrap; */
+    margin:auto;
+    max-width:1000px;
+    border-radius:25px;
+    /* padding:20px; */
+}
 
 .experiences {
     background-color: white;
+    color: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    margin:auto;
+    margin: auto;
     margin-bottom: 20px;
-    padding:20px;
+    padding: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.experience-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out; /* Smooth transition for height change */
+    padding-top: 0; /* No padding when hidden */
 }
 
+.experiences.active .experience-details {
+    max-height: 200px; /* adjust for different texts */
+    padding-top: 15px;
+}
+/* .experiences:hover{
+    background-color: #444;
+    opacity: 40%;
+} */
 .projects .project-item{
     margin-bottom:70px;
 }
@@ -393,10 +438,26 @@ p #date{
     background-color: #adadad48;
     width:100%;
     display:flex;
-    flex:wrap;
+    flex-direction: column;
+    flex: wrap ;
     margin:auto;
     max-width:1000px;
     border-radius:25px;
+}
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out, padding-top 0.7s ease-out; /* Smooth transition */
+    padding-top: 0; /* No padding when hidden */
+}
+.project-item.active .project-details {
+    max-height: 300px; /* Adjust this value as needed to fit your project content */
+    padding-top: 15px; /* Add some padding once expanded */
+}
+.project-item img,
+.project-item hr, .project-item h4{
+    display: block; /* Ensure they take up space */
+    margin-bottom: 10px; /* Add some space below the HR */
 }
 .certification-item img{
     width:100%;
@@ -514,77 +575,56 @@ p #date{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    overflow: hidden;
+    transition: opacity 1.5s ease-out; /* Fade-out */
 }
-.door-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#loadingGridCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: 20;
 }
-.door-container .left-door {
-    width: 50%;
-    height: 100%;
-    background-color: #444;
-    position: absolute;
-    left: 0;
-    transform: translateX(0);
-    transition: transform 2s ease-in-out;
+
+.intro-text {
+    text-align: center;
+    z-index: 10;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out 0.5s; /* Fade in */
 }
-.door-container .right-door {
-    width: 50%;
-    height: 100%;
-    background-color: #444;
-    position: absolute;
-    right: 0;
-    transform: translateX(0);
-    transition: transform 2s ease-in-out;
-}
-.intro-text{
-    text-align:center;
-    /* font-family: 'Courier New', Courier, monospace; */
-    z-index:10;
-}
+
 .intro-text h1 {
     font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
 }
 
 .intro-text p {
     font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #555;
+    text-shadow: none;
 }
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+#landingAnimation.hidden {
+    display: none;
+}
+
+#landingAnimation.fadeOut {
+    opacity: 0;
 }
 
 #mainContent {
     display: none;
     opacity: 0;
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
 }
-
-@keyframes door-opening {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
 #landingAnimation.opened .door-container .left-door {
     transform: translateX(-100%);
 }
