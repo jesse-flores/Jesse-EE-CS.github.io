@@ -327,8 +327,13 @@ p #date{
 }
 .projects_and_achievements {
     margin: auto;
-    max-width: 1200px;
-    border-radius: 8px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    flex: wrap ;
+    margin:auto;
+    max-width:1000px;
+    border-radius:25px;
 }
 .projects_and_achievements .section-title, .section-title {
     text-align: center;
@@ -485,14 +490,24 @@ p #date{
 }
 .certification-item{
     width:400px;
-    margin:auto;
-    margin:2%;
+    /* margin:auto; */
+    margin:20px 2%;
     box-shadow: #000000 15px;
     /* border:darkgrey 12px; */
 }
 #certs{
     width: 100%;
+    padding:none;
+    text-align: center;
     max-width:1000px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex: wrap ;
+    margin: 0;
+    padding:0;
+    max-width:1000px;
+    border-radius:25px;
 }
 .random_space{
     width:100%;
