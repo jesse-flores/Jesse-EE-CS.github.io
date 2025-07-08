@@ -268,7 +268,7 @@ footer{
     padding: 20px;
     text-align:center;
     font-size:0.9em;
-    display: none;
+    display: block; /* change if adding animation */
 
 }
 footer p{
@@ -613,7 +613,7 @@ p #date{
 }
 
 #landingAnimation.hidden {
-    display: none;
+    display: block;
 }
 
 #landingAnimation.fadeOut {
@@ -621,9 +621,9 @@ p #date{
 }
 
 #mainContent {
-    display: none;
-    opacity: 0;
-    transition: opacity 1s ease-out;
+    display: block; /* change if adding animation */
+    /* opacity: 0; */
+    /* transition: opacity 1s ease-out; */
 }
 #landingAnimation.opened .door-container .left-door {
     transform: translateX(-100%);
@@ -631,10 +631,6 @@ p #date{
 
 #landingAnimation.opened .door-container .right-door {
     transform: translateX(100%);
-}
-
-#landingAnimation.hidden {
-    display: none;
 }
 
 #landingAnimation.fadeOut {

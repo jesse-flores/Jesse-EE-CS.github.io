@@ -1,0 +1,107 @@
+.topHeading p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-content: middle;
+    top:0;
+    font-size: 1.5em;
+}
+.topHeading p #links-resume{
+    position:fixed;
+    right:24px;
+}
+.topHeading{
+    position:sticky;
+    display:block;
+    width:auto;
+    top:0;
+    height:fit-content;
+    font-size:20px;
+    padding-bottom:4px;
+    text-align:center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+    z-index:5;
+    overflow: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.meal {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.food-item {
+    margin: 5px 0;
+}
+
+.totals {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checklist {
+    margin-top: 15px;
+}
+
+.check-item {
+    margin: 5px 0;
+}
+
+#loading {
+    display: block;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.error {
+    color: #b83232;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+}
