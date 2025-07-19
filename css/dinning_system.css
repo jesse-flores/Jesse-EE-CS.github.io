@@ -24,7 +24,7 @@
     z-index:5;
     overflow: hidden;
 }
-body {
+.dewick-meal-container {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
