@@ -1,6 +1,6 @@
 // Main UI glue
 document.addEventListener('DOMContentLoaded', () => {
-    // --- UI elements ---
+    // UI elements
     const altitudeSlider = document.getElementById('altitudeSlider');
     const machSlider = document.getElementById('machSlider');
     const altitudeValue = document.getElementById('altitudeValue');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   altitudeValue.textContent = inputs.altitude;
   machValue.textContent = inputs.mach.toFixed(2);
 
-  // --- Chart.js setups ---
+  // Chart.js setups
   // Basic dark theme defaults
   Chart.defaults.color = '#dbeeff';
     Chart.defaults.font.family = 'Inter, Arial';
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     options: { scales: { x: { title: { display: true, text: 'Throttle %' } }, y: { title: { display: true, text: 'Fuel Flow (kg/s)' } } } }
   });
 
-  // --- UI interaction: sliders and pedal ---
+  // UI interaction: sliders and pedal
   altitudeSlider.addEventListener('input', (e) => {
     inputs.altitude = parseFloat(e.target.value);
     altitudeValue.textContent = inputs.altitude;
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init pedal position
   updatePedalUI();
 
-  // --- Visual update loop (turbine spin & flame flicker) ---
+  // Visual update loop (turbine spin & flame flicker)
   let turbineAngle = 0;
   function animateVisuals() {
     // turbine spin rate depends on throttle_pct (and on computed turbine energy we could use)
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   requestAnimationFrame(animateVisuals);
 
-  // --- throttled updates (avoid spamming heavy chart redraws) ---
+  // throttled updates (avoid spamming heavy chart redraws)
   let updateRequested = false;
   function queueUpdate() {
     if (!updateRequested) {
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run initial simulation
   runSimulationAndUpdateUI();
 
-  // --- Core simulation + UI update function ---
+  // Core simulation + UI update function
   function runSimulationAndUpdateUI() {
     // Map pedal pct to Tt4 (K)
     const t04 = throttlePctToT04(inputs.throttle_pct);

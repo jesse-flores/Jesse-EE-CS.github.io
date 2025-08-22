@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Mosaic Photo Generator</title>
+    <title>Mosaic Photo Generator | Jesse Flores</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/mosaic_visualizer.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mosaic_visualizer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-container">
+                <span class="logo-subtitle">Jesse Flores</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="mainContent">
-        <div class="topHeading">
-            <p>Jesse Flores
-                <a href="https://drive.google.com/file/d/1tbclX3G0-vmGrddK6Syk2zkIJ4Wf-tyP/view?usp=sharing"
-                    target="_blank" id="links-resume">Resume</a>
-            </p>
-            <header class="header">
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about_me.html">About Me</a></li>
-                        <li><a href="certifications.html">Certifications</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
+    <div class="main-content-wrapper">
         <div class="mosaic-container">
 
             <header class="mosaic-header">
@@ -35,9 +37,7 @@
                 <p>Create a stunning mosaic from your own pictures, right in your browser.</p>
             </header>
 
-
             <main class="mosaic-main">
-
                 <div class="controls-column">
                     <div class="control-section">
                         <h2 class="step-header">
@@ -107,7 +107,11 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="mosaic_visualizer.js"></script>
+    <footer>
+        <p>&copy;Website designed and developed entirely from scratch by Jesse Flores</p>
+    </footer>
+
+    <script type="text/javascript" src="js/mosaic_visualizer.js"></script>
 </body>
 
 </html>

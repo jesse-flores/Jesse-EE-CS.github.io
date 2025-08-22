@@ -38,7 +38,7 @@ function updateButtonState() {
 // Web Worker Setup
 function initializeWorker() {
     try {
-        worker = new Worker('mosaic_worker.js');
+        worker = new Worker('js/mosaic_worker.js');
 
         worker.onmessage = (e) => {
             const { type, payload } = e.data;

@@ -1,4 +1,5 @@
 const CATEGORIES = ['Protein', 'Veggies', 'Fruits', 'Grains', 'Dairy'];
+
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('date').value = new Date().toISOString().slice(0, 10);
     document.getElementById('generate-btn').addEventListener('click', generateMealPlan);
@@ -41,8 +42,8 @@ function processMenu(data, date) {
     if (!data.days) return [];
     const day = data.days.find(d => d.date === date);
     if (!day?.menu_items) return [];
-    const seen = new Set();
-    return day.menu_items.map(i => {
+
+    const items = day.menu_items.map(i => {
         const food = i.food || {};
         const n = food.rounded_nutrition_info || {};
         const name = food.name || 'Unnamed';
@@ -57,7 +58,10 @@ function processMenu(data, date) {
                 fat: parseInt(n.g_fat) || 0
             }
         };
-    }).filter(item => {
+    });
+
+    const seen = new Set();
+    return items.filter(item => {
         if (seen.has(item.name)) return false;
         seen.add(item.name);
         return true;
@@ -66,10 +70,10 @@ function processMenu(data, date) {
 
 function categorize(name) {
     const s = name.toLowerCase();
-    if (/egg|sausage|bacon|chicken|ham|tofu|pork|beef|fish|turkey|shrimp|steak/.test(s)) return 'Protein';
-    if (/potato|tomato|broccoli|spinach|salad|vegetable|carrot|pea|bean/.test(s)) return 'Veggies';
-    if (/apple|banana|berry|fruit|orange|grape|melon/.test(s)) return 'Fruits';
-    if (/bread|rice|pasta|oat|cereal|quinoa|bagel|muffin|toast|croissant/.test(s)) return 'Grains';
+    if (/egg|sausage|bacon|chicken|ham|tofu|pork|beef|fish|turkey|meatball|burger|crumbles|piccata|meatloaf|shrimp|pollock|thigh|breast|pepperoni|chorizo|steak|willy|moroccan|seitan/.test(s)) return 'Protein';
+    if (/potato|tomato|broccoli|spinach|pepper|onion|veggie|vegetable|salad|greens|carrot|kale|chard|pea|bean|zucchini|squash|cucumber|cauliflower|mint|lettuce|snow pea/.test(s)) return 'Veggies';
+    if (/apple|banana|berry|orange|grape|fruit|pineapple|pear|raisin|melon|grapefruit|blueberry|coconut|apricot|cherry/.test(s)) return 'Fruits';
+    if (/pancake|waffle|bread|oat|cereal|muffin|bagel|grain|rice|quinoa|toast|croissant|pasta|linguini|shell|noodle|risotto|orzo|barley/.test(s)) return 'Grains';
     if (/milk|cheese|yogurt/.test(s)) return 'Dairy';
     return 'Misc';
 }
@@ -79,8 +83,11 @@ function selectForMeal(items, goals, fulfilled) {
     const sorted = items.sort((a, b) => {
         const needA = !fulfilled.has(a.category) && a.category !== 'Misc';
         const needB = !fulfilled.has(b.category) && b.category !== 'Misc';
-        return (needA === needB ? 0 : needA ? -1 : 1) ||
-            ((b.nutrition.protein / b.nutrition.calories) - (a.nutrition.protein / a.nutrition.calories));
+        
+        const proteinRatioA = a.nutrition.calories > 0 ? a.nutrition.protein / a.nutrition.calories : 0;
+        const proteinRatioB = b.nutrition.calories > 0 ? b.nutrition.protein / b.nutrition.calories : 0;
+
+        return (needA === needB ? 0 : needA ? -1 : 1) || (proteinRatioB - proteinRatioA);
     });
 
     const chosen = [];
@@ -88,7 +95,7 @@ function selectForMeal(items, goals, fulfilled) {
     const itemCounts = {};
 
     for (let item of sorted) {
-        if (sumCals >= target * 0.9) break; // Stop when we reach 90% of target
+        if (sumCals >= target * 0.9) break;
 
         const maxQuantity = 3;
         const currentCount = itemCounts[item.name] || 0;
@@ -98,11 +105,11 @@ function selectForMeal(items, goals, fulfilled) {
         const remainingQuantity = maxQuantity - currentCount;
         const possibleAdditions = Math.min(
             remainingQuantity,
-            Math.floor((target * 1.1 - sumCals) / item.nutrition.calories)
+            item.nutrition.calories > 0 ? Math.floor((target * 1.2 - sumCals) / item.nutrition.calories) : 0
         );
 
         if (possibleAdditions > 0) {
-            const additionsToMake = Math.min(possibleAdditions, 3 - currentCount);
+            const additionsToMake = Math.min(possibleAdditions, maxQuantity - currentCount);
             for (let i = 0; i < additionsToMake; i++) {
                 chosen.push(item);
                 sumCals += item.nutrition.calories;
@@ -142,8 +149,8 @@ function displayResults(meals, goals, fulfilled, date) {
     }
 
     html += `<div class="totals"><hr>Nutrition Totals:<br>
-Calories: ${totals.calories}/${goals.calories} (${Math.round(totals.calories / goals.calories * 100)}%)<br>
-Protein: ${totals.protein}/${goals.protein} (${Math.round(totals.protein / goals.protein * 100)}%)</div>`;
+    Calories: ${totals.calories}/${goals.calories} (${(totals.calories / goals.calories * 100).toFixed(1)}%)<br>
+    Protein: ${totals.protein}/${goals.protein} (${(totals.protein / goals.protein * 100).toFixed(1)}%)</div>`;
 
     html += '<div class="checklist"><p>Food Group Checklist:</p>';
     CATEGORIES.forEach(c => {

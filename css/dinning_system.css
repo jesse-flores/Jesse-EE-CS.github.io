@@ -1,107 +1,137 @@
-.topHeading p{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    align-content: middle;
-    top:0;
-    font-size: 1.5em;
+@import url("/possible_alt/2nd/styles.css");
+
+body {
+    padding: 0;
 }
-.topHeading p #links-resume{
-    position:fixed;
-    right:24px;
-}
-.topHeading{
-    position:sticky;
-    display:block;
-    width:auto;
-    top:0;
-    height:fit-content;
-    font-size:20px;
-    padding-bottom:4px;
-    text-align:center;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #333;
-    z-index:5;
-    overflow: hidden;
-}
+
 .dewick-meal-container {
-    font-family: Arial, sans-serif;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.6;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dewick-meal-container h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: var(--text-primary);
 }
 
 input,
 button {
-    padding: 8px 12px;
-    font-size: 16px;
+    padding: 1rem;
+    font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid var(--line-color);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(44, 123, 229, 0.5);
+}
+
+.btn {
+    background-color: var(--accent);
+    color: var(--bg-dark);
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+.btn:hover {
+    background-color: var(--hover-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(44, 123, 229, 0.2);
 }
 
 #results {
-    margin-top: 30px;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
+    margin-top: 3rem;
+    border-top: 1px solid var(--line-color);
+    padding-top: 2rem;
 }
 
 .meal {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-dark);
     border-radius: 5px;
+    border: 1px solid var(--line-color);
 }
 
 .food-item {
-    margin: 5px 0;
+    margin: 0.5rem 0;
 }
 
 .totals {
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 2rem;
+    color: var(--accent);
 }
 
 .checklist {
-    margin-top: 15px;
+    margin-top: 1.5rem;
 }
 
 .check-item {
-    margin: 5px 0;
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
 }
 
-#loading {
-    display: block;
-    margin: 20px 0;
-    font-style: italic;
+.hidden {
+    display: none;
 }
 
 .error {
-    color: #b83232;
-    padding: 10px;
-    background-color: #ffebee;
+    color: #e54b4b;
+    padding: 1rem;
+    background-color: rgba(229, 75, 75, 0.1);
     border-radius: 4px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .dewick-meal-container {
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    .dewick-meal-container h1 {
+        font-size: 2rem;
+    }
+
+    input,
+    button {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
 }
