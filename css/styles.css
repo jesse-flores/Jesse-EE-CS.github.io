@@ -80,6 +80,7 @@ section {
     padding: 1.5rem 3rem;
     max-width: 1200px;
     margin: auto;
+    overflow: hidden;
 }
 
 .nav-links {
@@ -521,24 +522,50 @@ footer {
 @media (max-width: 768px) {
     html, body {
         width: 100%;
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
+    }
+    header .nav-links{
+        display: none;
+    }
+    .hero-buttons .btn{
+        width: fit-content;
+        padding:10px;
+        font-size: 12px;
+    }
+    .hero-buttons{
+        gap: 2vw;
+    }
+    header nav{
+        padding: 5px;
+        width: 100%;
+    }
+    #about{
+        margin-top: 40px;
+    }
+    #hero{
+        margin-top: 50px;
+    }
+    .section-title{
+        font-size: large;
     }
     .hero-content h1 {
         font-size: 3rem;
         -webkit-text-stroke: 0.5px var(--accent);
     }
-
+    .hero-content{
+        margin-bottom: 25px;
+    }
+    .hero .hero-content .hero-subtitle{
+        font-size: small;
+        display: none;
+    }
     section {
         padding: 4rem 1rem;
     }
-
     .navbar {
-        padding: 0;
-        width: 100%;
-        margin: 0;
-    }
-
-    .nav-links {
-        padding: 0;
+        padding: 8px;
+        width: 95%;
+        margin: auto;
+        font-size: small;
     }
 }
