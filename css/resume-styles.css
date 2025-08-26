@@ -139,9 +139,6 @@ h2 {
     color: var(--text-secondary);
 }
 
-/* * MOBILE OPTIMIZATION
- * This media query applies when the screen width is 768px or less.
- */
 @media (max-width: 768px) {
     body {
         padding: 1rem; /* Reduce overall padding on smaller screens */

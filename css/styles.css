@@ -522,10 +522,12 @@ footer {
 @media (max-width: 768px) {
     html, body {
         width: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
+    /* Keep nav links visible on small screens (no hamburger implemented) */
     header .nav-links{
         display: none;
+        gap: 1rem;
     }
     .hero-buttons .btn{
         width: fit-content;
@@ -555,9 +557,11 @@ footer {
     .hero-content{
         margin-bottom: 25px;
     }
+    /* Show subtitle on small screens for clarity */
     .hero .hero-content .hero-subtitle{
         font-size: small;
-        display: none;
+        display: block !important;
+        margin-top: 0.5rem;
     }
     section {
         padding: 4rem 1rem;
