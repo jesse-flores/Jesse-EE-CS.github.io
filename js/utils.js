@@ -7,7 +7,7 @@ fetch("https://ipapi.co/json/")
       ua: navigator.userAgent
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbz3_ht4rtMqoG-aakbmKFSypvC7_SXkVHUuzEOtlQ3ASTJ3i9iGCucG8fSjaiONk6cIcw/exec", {
+    fetch("https://script.google.com/macros/library/d/1J8LMBPLd3D7Mu5nZf98FOGNIzEFBv-jH3eMKk_xY46OKOm556lNTX4gE/6", {
       method: "POST",
       body: JSON.stringify(logData),
       headers: {
