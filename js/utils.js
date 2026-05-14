@@ -1,18 +1,23 @@
 fetch("https://ipapi.co/json/")
   .then(res => res.json())
   .then(data => {
+    
     const logData = {
+      key: "something_very_secretive_muahahahahaha",
       ip: data.ip,
       loc: `${data.city}, ${data.country_name}`,
       ua: navigator.userAgent
     };
 
-    fetch("https://script.google.com/macros/library/d/1J8LMBPLd3D7Mu5nZf98FOGNIzEFBv-jH3eMKk_xY46OKOm556lNTX4gE/6", {
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwFNEL55Ch8-oLgnWQTIdoXFdB8p2d0JxjrXDaOIG5AqPK_hjGeG5IU7FXHPyuY5p_utw/exec";
+
+    fetch(WEB_APP_URL, {
       method: "POST",
       body: JSON.stringify(logData),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
       }
     });
   })
-  .catch(() => {});
+  .catch(() => {
+  });

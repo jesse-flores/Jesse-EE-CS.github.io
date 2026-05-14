@@ -1,471 +1,223 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesse Flores | Robotics & AI Engineer</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jesse Flores | Robotics & AI Engineer</title>
+        <link rel="stylesheet" href="css/styles_new.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <header class="header">
         <nav class="navbar">
-            <div class="logo-container">
-                <span class="logo-subtitle">Jesse Flores</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a class="resume-btn" href="resume.html">Resume</a>
+                <div class="logo">JF.</div>
+                <div class="nav-links">
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="resume.html" class="btn-outline">Resume</a>
+                </div>
         </nav>
-    </header>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="fade-in-up">JESSE FLORES</h1>
-            <h2 class="hero-subtitle fade-in-up">Robotics & AI Engineer | EE & CS @ Tufts University</h2>
-            <p class="hero-tagline fade-in-up">
-                From building human-powered vehicles to prototyping AI-driven study tools, I merge mechanical intuition
-                with
-                computational design to create systems that bridge ideas and real-world impact. CAD to code, I hold a
-                passion for building the future of robotics and more.
-            </p>
-            <div class="hero-buttons fade-in-up">
-                <a href="#projects" class="btn">Explore Work</a>
-                <a href="mailto:jesse.flores@tufts.edu" class="btn-btn-icon" aria-label="Email">
-                    <img src="assets/mail_svg.svg" alt="Email">
-                    <!-- <img src="assets/mail_svg.svg" alt="Email"> -->
-                </a>
-                <a href="https://github.com/jesse-flores" class="btn-btn-icon" target="_blank" aria-label="GitHub">
-                    <img src="assets/github_svg.svg" alt="GitHub">
-                    <!-- <img src="assets/github_svg.svg" alt="GitHub"> -->
-                </a>
-                <a href="https://linkedin.com/in/flores-jesse" class="btn-btn-icon" target="_blank"
-                    aria-label="LinkedIn">
-                    <img src="assets/linkedin_svg.svg" alt="LinkedIn">
-                    <!-- <img src="assets/linkedin_svg.svg" alt="LinkedIn"> -->
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title" data-aos="fade-up">My Story</h2>
-        <div class="about-content" data-aos="fade-up">
-            <div class="about-text">
-                <p>Growing up, my education wasn't focused on STEM, but I found my way into engineering through sheer
-                    curiosity. I was fascinated by the hidden mechanisms inside everyday objects, from taking apart toys
-                    to dissecting machines. This tinkering evolved into a deeper interest in new technologies, leading
-                    me to learn new software and solutions to build what I previously only admired from afar.</p>
-                <p>My academic journey at Tufts has been shaped by a desire to both understand and create. I've realized
-                    that the best solutions aren't found alone, but through collaboration and community. This belief in
-                    team-driven innovation fuels my passion for engineering and motivates me to seek opportunities
-                    to apply my skills to real-world challenges with a lasting impact.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="section-title">Core Competencies</h2>
-        <div class="skills-container" data-aos="fade-up">
-            <div class="skill-category">
-                <h3><i class="fa-solid fa-robot"></i> Robotics & Embedded</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">ROS2</span>
-                    <span class="skill-tag">SLAM</span>
-                    <span class="skill-tag">LiDAR</span>
-                    <span class="skill-tag">OpenCV</span>
-                    <span class="skill-tag">MediaPipe</span>
-                    <span class="skill-tag">KiCad</span>
+        <header class="hero" id="home">
+                <div class="hero-content reveal">
+                        <h1>Jesse Flores</h1>
+                        <h2 class="mono-text accent">Robotics & AI Engineer | EE & CS @ Tufts University</h2>
+                        <p>
+                                Developing the future of robotics and intelligent systems. I merge mechanical intuition with computational design, from building custom 8-bit CPU emulators and neuroevolutionary ML frameworks to engineering autonomous 3D mapping vehicles.
+                        </p>
+                        <div class="hero-actions">
+                                <a href="#projects" class="btn-primary">View Featured Work</a>
+                                <div class="social-icons">
+                                        <a href="https://github.com/jesse-flores" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                        <a href="https://linkedin.com/in/flores-jesse" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="mailto:jesse.flores@tufts.edu"><i class="fa-solid fa-envelope"></i></a>
+                                </div>
+                        </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fa-solid fa-code"></i> Programming & AI</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">MATLAB</span>
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">IsaacLabs</span>
+        </header>
+
+        <section id="experience" class="section">
+                <div class="container reveal">
+                        <h2 class="section-title">Experience</h2>
+                        <div class="timeline">
+                                
+                                <div class="timeline-item">
+                                        <div class="timeline-date mono-text">Summer 2026</div>
+                                        <div class="timeline-content">
+                                                <h3>Embedded Engineering Intern</h3>
+                                                <h4 class="accent">Wabtec Corporation</h4>
+                                                <p>Incoming embedded engineering intern focusing on low-level hardware design and control systems for industrial applications. Working across high-level and low-level hardware-software platforms from STMs to deep learning and computer vision.</p>
+                                        </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                        <div class="timeline-date mono-text">May 2025 - Present</div>
+                                        <div class="timeline-content">
+                                                <h3>AI & Robotics Research Scholar</h3>
+                                                <h4 class="accent">ACE++ Program, Tufts University</h4>
+                                                <p>Conducting research on AI-powered robotics model training under faculty supervision. Engaged with coursework in data structures and discrete mathematics and additional career-advacement skills summer 2025.</p>
+                                        </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                        <div class="timeline-date mono-text">Sept 2024 - Present</div>
+                                        <div class="timeline-content">
+                                                <h3>Robotics Education Intern</h3>
+                                                <h4 class="accent">Robotics For All</h4>
+                                                <p>Designing and leading a hands-on robotics curriculum for underserved schools, bridging the gap between theoretical engineering and practical application. Worked in John D. O'bryant's school as well as Boston's English school.</p>
+                                        </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                        <div class="timeline-date mono-text">...</div>
+                                <div class="timeline-content">
+
+                        </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fa-solid fa-drafting-compass"></i> CAD & Prototyping</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">SolidWorks</span>
-                    <span class="skill-tag">Creo</span>
-                    <span class="skill-tag">OnShape</span>
-                    <span class="skill-tag">3D Printing</span>
-                    <span class="skill-tag">Machine Tools (lathe, laser cutter, water jet, etc.)</span>
+        </section>
+
+        <section id="skills" class="section bg-alt">
+                <div class="container reveal">
+                        <h2 class="section-title">Core Competencies</h2>
+                        <div class="skills-grid">
+                                <div class="skill-block">
+                                        <h3><i class="fa-solid fa-microchip"></i> Hardware & Embedded</h3>
+                                        <div class="tags">
+                                                <span>KiCad</span><span>x86-64 Assembly</span><span>SolidWorks</span><span>PCB Design</span><span>C++</span>
+                                        </div>
+                                </div>
+                                <div class="skill-block">
+                                        <h3><i class="fa-solid fa-robot"></i> Robotics & Vision</h3>
+                                        <div class="tags">
+                                                <span>ROS2</span><span>SLAM</span><span>LiDAR</span><span>OpenCV</span><span>Inverse Kinematics</span>
+                                        </div>
+                                </div>
+                                <div class="skill-block">
+                                        <h3><i class="fa-solid fa-brain"></i> AI & Software</h3>
+                                        <div class="tags">
+                                                <span>Python</span><span>PyTorch</span><span>Neuroevolution</span><span>TensorFlow</span><span>Git</span>
+                                        </div>
+                                </div>
+                        </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fa-solid fa-tools"></i> Tools & Methods</h3>
-                <div class="skill-items">
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Agile</span>
-                    <span class="skill-tag">Bilingual (English/Spanish)</span>
-                    <span class="skill-tag">Microsoft and Google Suite</span>
+        </section>
+
+        <section id="projects" class="section">
+                <div class="container reveal">
+                        <h2 class="section-title">Featured Engineering Work</h2>
+                        <div class="project-grid">
+
+                                <div class="project-card">
+                                        <div class="project-content">
+                                                <div class="project-header">
+                                                        <h3>x86-64 Assembly Emulator</h3>
+                                                        <div class="project-links">
+                                                                <a href="https://github.com/jesse-flores/x86-64-Intel-Emulator" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                                        </div>
+                                                </div>
+                                                <p>Developed a custom 8-bit CPU emulator and a compiler for a Micro-C language. Executed high-level code on a custom virtual machine, demonstrating mastery of computer architecture and OS principles.</p>
+                                                <div class="tags mono-text">
+                                                        <span>C++</span><span>Compilers</span><span>Computer Architecture</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="project-card">
+                                        <div class="project-content">
+                                                <div class="project-header">
+                                                        <h3>Neuroevolutionary Continual Learning for LLMs</h3>
+                                                        <div class="project-links">
+                                                                <a href="#" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+                                                        </div>
+                                                </div>
+                                                <p>Authored a paper (ICLR/MLSys 2026) proposing a dual-population evolutionary system (EMA-NEAT) to mitigate catastrophic forgetting in Language Models. Engineered a complete PyTorch training pipeline.</p>
+                                                <div class="tags mono-text">
+                                                        <span>Python</span><span>PyTorch</span><span>NEAT</span><span>ML</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="project-card">
+                                        <div class="project-content">
+                                                <div class="project-header">
+                                                        <h3>Embeded Systems Final Project</h3>
+                                                        <div class="project-links">
+                                                                <a href="https://github.com/jesse-flores/Embeded_Systems_Final_Project" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                                        </div>
+                                                </div>
+                                                <p>Working in a team of four engineers to build multi-board and pheripheral communication involved final project recreating the whack-a-mole game.</p>
+                                                <div class="tags mono-text">
+                                                        <span>STM32</span><span>SPI</span><span>C</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="project-card">
+                                        <div class="project-content">
+                                                <div class="project-header">
+                                                        <h3>KiCad</h3>
+                                                        <div class="project-links">
+                                                                <a href="https://github.com/jesse-flores/Final_Project_PCB_Design_EE123-BME123_Bioelectricity" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                                        </div>
+                                                </div>
+                                                <p>Love adventures; helped solder boards for my [future] professor and built this KiCad to better explore the tool!</p>
+                                                <div class="tags mono-text">
+                                                        <span>KiCad</span><span>Embedded</span><span>Soldering</span><span>PCB Designing</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                        
+                        <div class="view-more">
+                                <p>For web tools, signal processing algorithms, and earlier projects, visit my <a href="https://github.com/jesse-flores" target="_blank" class="accent">GitHub</a>.<br/>Currently building a robot swarm for first-responders!</p>
+                        </div>
                 </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <h2 class="section-title">Featured Work</h2>
-        <div class="project-grid">
+        <section id="partners" class="section bg-alt">
+                <div class="container reveal">
+                        <h2 class="section-title" style="text-align: center;">Affiliations & Fellowships</h2>
+                        <p class="partners-subtitle">Proud to be supported by and associated with these incredible organizations.</p>
 
+                        <div class="partners-grid">
+                                <a href="https://www.thrivescholars.org/" target="_blank" class="partner-logo" aria-label="Thrive Scholars">
+                                        <img src="assets/Thrive-Logo.png" alt="Thrive Scholars">
+                                </a>
 
+                                <a href="https://mlt.org/" target="_blank" class="partner-logo" aria-label="Management Leadership of Tomorrow">
+                                        <img src="assets/MLT-logo.png" alt="MLT">
+                                </a>
 
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/research_paper_2.png" alt="Future-Ready Redesign of Microwave Heating">
-                <div class="project-info">
-                    <h3>(ON_GOING) Future-Ready Redesign of Microwave Heating</h3>
-                    <p>Authored a paper for <b>IEEE RFSA</b> proposing a novel framework to enhance the efficiency and
-                        speed of the microwave oven's operation. Paper proposes closed-loop architecture paving the way
-                        towards a responsive feedback loop controlling microwave heating in an intelligent way.
-                    </p>
-                    <div class="project-meta">
-                        <span class="tags">#RF #MicrowaveHeating #AI</span>
-                        <a href="https://drive.google.com/file/d/17h0AhQqwH2sy_0BJ2_tKEIV2lavs7Z_H/view?usp=sharing"
-                            target="_blank" class="github-link"><i class="fa-solid fa-file-lines"></i> Read Paper</a>
-                    </div>
+                                <a href="https://www.breakthroughtech.org/" target="_blank" class="partner-logo" aria-label="Break Through Tech at MIT">
+                                        <img src="https://data.org/wp-content/uploads/2023/02/Break-Through-Tech-logo.png" alt="Break Through Tech @ MIT">
+                                </a>
+
+                                <a href="https://www.questbridge.org/" target="_blank" class="partner-logo" aria-label="QuestBridge">
+                                        <img src="https://s3.amazonaws.com/campuskudos-uploads/clusters%2Flogos%2F1723166780185_Q" alt="QuestBridge" class="dark-logo">
+                                </a>
+
+                                <a href="https://engineering.tufts.edu/ace" target="_blank" class="partner-logo" aria-label="ACE++ at Tufts">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Tufts_University_logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="ACE++ at Tufts">
+                                </a>
+
+                                <a href="https://engineering.tufts.edu/best" target="_blank" class="partner-logo" aria-label="BEST at Tufts">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsT76yEjLLq6oux41MGTM93D7KscrgzWEr5A&s" alt="BEST at Tufts">
+                                </a>
+                        </div>
                 </div>
-            </div>
+        </section>
 
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/research_paper.png" alt="Neuroevolutionary Continual Learning visualization">
-                <div class="project-info">
-                    <h3>(WAITING FOR PEER-REVIEW) Neuroevolutionary Continual Learning for Language Models</h3>
-                    <p>Authored a paper for <b>ICLR 2026 & MLSys 2026</b> proposing a novel framework to mitigate
-                        <b>catastrophic forgetting</b> in LLMs. Designed a dual-population <b>evolutionary system
-                            (EMA-NEAT)</b> to evolve network architecture and specialized neural modules. Benchmarked on
-                        real-world datasets and engineered a <b>PyTorch-based pipeline</b> for the full training stack.
-                    </p>
-                    <div class="project-meta">
-                        <span class="tags">#Python #PyTorch #NEAT #ContinualLearning</span>
-                        <a href="https://drive.google.com/file/d/1yBf2mpTK1S1BWyhWKJs-d_mKiL74ulfP/view?usp=sharing"
-                            target="_blank" class="github-link"><i class="fa-solid fa-file-lines"></i> Read Paper</a>
-                    </div>
+        <footer>
+                <div class="container">
+                        <h2>Let's keep in touch</h2>
+                        <p>I am always looking for opportunities to tackle complex hardware and software challenges.</p>
+                        <a href="mailto:jesse.flores@tufts.edu" class="btn-primary">Say Hello</a>
+                        <p class="copyright">&copy; 2026 Jesse Flores. Built from scratch. Collecting data analytics for security purpouses.</p>
                 </div>
-            </div>
+        </footer>
 
-
-
-
-
-            <div class="project-card" data-aos="fade-up">
-                <img src="https://miro.medium.com/v2/resize:fit:2000/1*k5aOhvY5U-C23BLYwDGmRg.jpeg"
-                    alt="Custom Computing Stack Emulator">
-                <div class="project-info">
-                    <h3>Full-Stack Computer Emulator</h3>
-                    <p>Developed a <b>custom 8-bit CPU emulator</b> and a <b>compiler for a Micro-C language</b>. This
-                        project showcases a deep understanding of computer architecture, operating system principles,
-                        and compiler
-                        design by executing high-level code on a custom virtual machine.</p>
-                    <div class="project-meta">
-                        <span class="tags">#C++ #ComputerArchitecture #Compilers</span>
-                        <a href="https://github.com/jesse-flores/Custom-Computing-Stack-Emulator-Assembler-and-Compiler"
-                            target="_blank" class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up">
-                <img src="https://repository-images.githubusercontent.com/459411579/19db8877-2322-4ec0-a6aa-415da84b6248"
-                    alt="Handwritten Digit Recognition with a Neural Network">
-                <div class="project-info">
-                    <h3>Neural Network from Scratch</h3>
-                    <p>Engineered a <b>feedforward neural network</b> in C++ with an interactive <b>SFML GUI</b>. This
-                        low-level implementation of backpropagation and matrix operations showcases a deep understanding
-                        of ML fundamentals.</p>
-                    <div class="project-meta">
-                        <span class="tags">#C++ #NeuralNetworks #SFML</span>
-                        <a href="https://github.com/jesse-flores/Handwritten-Digit-Recognition-with-a-Neural-Network"
-                            target="_blank" class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up">
-                <img src="images/touchless-mouse.jpg" alt="Gesture-Controlled Virtual Mouse">
-                <div class="project-info">
-                    <h3>Gesture-Controlled Interface</h3>
-                    <p>Developed a virtual mouse using <b>Python, OpenCV, and MediaPipe</b> for real-time hand tracking.
-                        Created a refined human-computer interface with calibrated motion sensitivity and gesture
-                        smoothing, demonstrating HCI principles.</p>
-                    <div class="project-meta">
-                        <span class="tags">#Python #OpenCV #MediaPipe #HCI</span>
-                        <a href="https://github.com/jesse-flores/TouchlessMouse" target="_blank" class="github-link"><i
-                                class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up">
-                <img src="https://github.com/jesse-flores/Interactive-Audio-Visualizer-with-Noise-Filtering/blob/main/image.png?raw=true"
-                    alt="Interactive Audio Visualizer with Noise Filtering">
-                <div class="project-info">
-                    <h3>Interactive Audio Visualizer</h3>
-                    <p>Created a real-time audio visualizer in <b>Python</b> with live mic input. Applied <b>noise
-                            filtering</b> and signal processing, demonstrating an understanding of digital signal
-                        processing
-                        fundamentals.</p>
-                    <div class="project-meta">
-                        <span class="tags">#Python #SignalProcessing #Audio</span>
-                        <a href="https://github.com/jesse-flores/Interactive-Audio-Visualizer-with-Noise-Filtering"
-                            target="_blank" class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up">
-                <img src="images/first-responder-robot.jpg" alt="First Responder Robot">
-                <div class="project-info">
-                    <h3>Robotic 3D Mapping Vehicle (on-going)</h3>
-                    <p>Designing a mobile robot for <b>3D mapping</b> in hazardous environments, integrating <b>LiDAR,
-                            ROS2,
-                            and SLAM</b>.
-                    </p>
-                    <div class="project-meta">
-                        <span class="tags">#Python #ROS2 #SLAM #LiDAR</span>
-                        <a href="https://github.com/jesse-flores/First-Responder" target="_blank" class="github-link"><i
-                                class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-aos="fade-up">
-                <img src="images/hexapod.jpg" alt="Hexapod Walker">
-                <div class="project-info">
-                    <h3>Hexapod Walker (on-going)</h3>
-                    <p>Building a six-legged robot using <b>C++</b> and <b>inverse kinematics</b> for stable, multi-gait
-                        movement. This full electromechanical system from concept to prototype will demonstrate
-                        expertise in
-                        embedded control and real-time computation when finished.</p>
-                    <div class="project-meta">
-                        <span class="tags">#C++ #Embedded #InverseKinematics</span>
-                        <a href="https://github.com/jesse-flores/Hexapod" target="_blank" class="github-link"><i
-                                class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/tactile_map.png" alt="Tactile Map for the Visually Impaired">
-                <div class="project-info">
-                    <h3>Tactile Map for the Visually Impaired</h3>
-                    <p>Developed a tactile map using <b>Python</b> and <b>OpenCV</b> to convert visual maps into
-                        braille-embossed formats. This project enhances accessibility for the visually impaired.
-                        Inspired and submited into the AlgoArena hackathon.
-                    </p>
-                    <div class="project-meta">
-                        <span class="tags">#Python #CAD #3D Modeling #Accessibility</span>
-                        <a href="https://github.com/jesse-flores/Tactile-Map-Generator" target="_blank"
-                            class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/tufts-dinning.png" alt="Tufts Dewick Meal Generator Thumbnail">
-                <div class="project-info">
-                    <h3>Tufts Dewick Meal Generator</h3>
-                    <p>Goal-oriented meal generator for Tufts students using the dewick dinning hall. Inspired and
-                        tasked to accomplish initially in Ruby for CS15 midterm (build a project with a new language
-                        within 15 hours).</p>
-                    <a href="https://jesse-flores.github.io/Jesse-EE-CS.github.io/dewick-meal-generator" target="_blank"
-                        class="btn btn-outline">View Project <i class="fa-solid fa-arrow-right-long"></i></a>
-                    <div class="project-meta">
-                        <span class="tags">#HTML/CSS/JS #Ruby #API</span>
-                        <a href="https://github.com/jesse-flores/tufts-meal-generator" target="_blank"
-                            class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/mosaic_visualizer_thumbnail.png" alt="photo-mosaic-visualizer thumbnail">
-                <div class="project-info">
-                    <h3>Photo Mosaic Visualizer</h3>
-                    <p>Image reconstruction based on folder of inputted images.</p>
-                    <a href="https://jesse-flores.github.io/Jesse-EE-CS.github.io/mosaic_visualizer" target="_blank"
-                        class="btn btn-outline">View Project <i class="fa-solid fa-arrow-right-long"></i></a>
-                    <div class="project-meta">
-                        <span class="tags">#HTML/CSS/JS #OpenCV #Vision</span>
-                        <a href="https://github.com/jesse-flores/photo-mosaic-visualizer" target="_blank"
-                            class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            <div class="project-card" data-aos="fade-up">
-                <img src="assets/jet_sim.png" alt="2-D Jet Engine Technical Simulator">
-                <div class="project-info">
-                    <h3>2-D Jet Engine Technical Simulator</h3>
-                    <p>Interactive jet engine simulator for education and learning. Inspired by Phy 12 course at
-                        <b>Tufts University</b>.
-                    </p>
-                    <a href="https://jesse-flores.github.io/Jesse-EE-CS.github.io/jet-engine-simulator" target="_blank"
-                        class="btn btn-outline">View Project <i class="fa-solid fa-arrow-right-long"></i></a>
-                    <div class="project-meta">
-                        <span class="tags">#HTML/CSS/JS #Aerospace</span>
-                        <a href="https://github.com/jesse-flores/Quantum-Teleportation-Simulation" target="_blank"
-                            class="github-link"><i class="fa-brands fa-github"></i> GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="view-more-container">
-            <a href="https://github.com/jesse-flores" target="_blank" class="btn btn-outline">View All Projects <i
-                    class="fa-solid fa-arrow-right-long"></i></a>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2 class="section-title">Experience & Leadership</h2>
-        <div class="experience-timeline" data-aos="fade-up">
-            <div class="timeline-item">
-                <div class="timeline-date">May 2025 - Present</div>
-                <div class="timeline-content">
-                    <h3>AI & Robotics Research Scholar</h3>
-                    <p class="company">ACE++ Program, Tufts University</p>
-                    <ul>
-                        <li>Initiated research on <b>AI-powered robotics model training</b> under Tufts faculty
-                            supervision.</li>
-                        <li>Completed foundational coursework in <b>data structures and algorithms</b>.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Sept 2024 - Present</div>
-                <div class="timeline-content">
-                    <h3>Robotics Education Intern</h3>
-                    <p class="company">Robotics For All</p>
-                    <ul>
-                        <li>Designed and led a hands-on robotics curriculum for underserved schools.</li>
-                        <li>Developed revamped lesson plans and demos using <b>Lego robotics</b>.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">January 2025 – May 2025</div>
-                <div class="timeline-content">
-                    <h3>Learning Outreach Fellow</h3>
-                    <p class="company">Center for Engineering Education and Outreach (CEEO)</p>
-                    <ul>
-                        <li>Designed and led weekly hands-on activities, including bridge constructing and systematic
-                            robot control processing
-                            applications, fostering critical thinking and problem-solving skills, evidenced by their
-                            improved communication and
-                            brainstorming process.</li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="timeline-item">
-                <div class="timeline-date">March 2025 - Present</div>
-                <div class="timeline-content">
-                    <h3>Electrical Engineering Chair</h3>
-                    <p class="company">Robotics Club, Tufts University</p>
-                    <ul>
-                        <li>Serving as the primary technical resource for all EE-related club projects.</li>
-                        <li>Mentoring peers on topics including circuit design, embedded systems, and robotics.</li>
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-        <!-- Awards & Honors Section -->
-        <div class="timeline-item awards-section" data-aos="fade-up">
-            <div class="timeline-date">Awards & Honors</div>
-            <div class="timeline-content">
-                <ul class="awards-list">
-                    <li><strong>Dean's List</strong> (Since Freshman Year)</li>
-                    <li><strong>Hispanic Scholarship Fund Recipient</strong></li>
-                    <li><strong>Questbridge College Prep Scholar & Match Scholar</strong></li>
-                    <li><strong>Thrive Scholars</strong> (formerly SCS Noonan Scholars)</li>
-                    <li><strong>Access to Computing Equity (ACE++) Scholar</strong></li>
-                    <li><strong>Bridge to Engineering Success at Tufts University (BEST) Scholar</strong></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Campus Involvement Section -->
-        <div class="timeline-item campus-section" data-aos="fade-up">
-            <div class="timeline-date">Campus & Community</div>
-            <div class="timeline-content">
-                <ul class="campus-list">
-                    <li><strong>Robotics Club, Tufts University</strong> – Electrical Engineering Chair</li>
-                    <li><strong>IEEE, Tufts University</strong> – Webmaster</li>
-                    <li><strong>Electric Racing @ Tufts</strong></li>
-                    <li><strong>Society of LatinX Engineers and Scientists (SOLES) @ Tufts</strong></li>
-                    <li><strong>Mechanical Keyboard Club @ Tufts</strong></li>
-
-                </ul>
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <section id="contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-content" data-aos="fade-up">
-            <p>I am always looking for opportunities to apply my skills to challenging problems. Please feel free to
-                reach out.</p>
-            <a href="mailto:jesse.flores@tufts.edu" class="btn">Say Hello <i class="fa-solid fa-paper-plane"></i></a>
-            <div class="social-links">
-                <a href="https://github.com/jesse-flores" target="_blank" aria-label="GitHub"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/flores-jesse" target="_blank" aria-label="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy;Website designed and developed entirely from scratch by Jesse Flores
-            All Rights Reserved | Copyright ⓒ 2025 Jesse Flores</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/utils.js"></script>
+        <script src="js/new_website_script.js"></script>
+        <script src="js/utils.js"></script>
 </body>
-
 </html>
-
-<!-- Professor's idea: consider doing a command Line Interface -->
